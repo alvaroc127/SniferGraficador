@@ -22,10 +22,11 @@ int main( ){
 		wcout << " (" << iface.friendly_name() << ")" << endl;
 	}
 	NetworkInterface iface = NetworkInterface::default_interface();
+	cout << "Default Interface " << iface.name() << endl;
 	SnifferConfiguration config;
 	config.set_promisc_mode(true);
 	config.set_snap_len(64 * 1024);
-	config.set_timeout(10*1000);
+	//config.set_timeout(10);
 	config.set_filter(" ip and tcp and port 80");
 	Sniffer snifer(iface.name(), config);
 	Packet pack = snifer.next_packet();

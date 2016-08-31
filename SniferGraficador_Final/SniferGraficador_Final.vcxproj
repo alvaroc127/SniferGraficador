@@ -175,11 +175,21 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Header.cpp" />
+    <ClCompile Include="src\HeaderTram.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MindrayPacket.cpp" />
+    <ClCompile Include="src\MindrayParametros.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
+    <ClCompile Include="src\SubTrama.cpp" />
     <ClCompile Include="src\Trama.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Include\Header.h" />
+    <ClInclude Include="Include\HeaderTram.h" />
+    <ClInclude Include="Include\MindrayPacket.h" />
+    <ClInclude Include="Include\MindrayParametros.h" />
+    <ClInclude Include="Include\SubTrama.h" />
     <ClInclude Include="Include\Trama.h" />
     <ClInclude Include="src\ofApp.h" />
   </ItemGroup>

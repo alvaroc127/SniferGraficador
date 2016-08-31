@@ -10,6 +10,21 @@
     <ClCompile Include="src\Trama.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Header.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SubTrama.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HeaderTram.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MindrayPacket.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MindrayParametros.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -24,6 +39,21 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="Include\Trama.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Header.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SubTrama.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\HeaderTram.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\MindrayPacket.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\MindrayParametros.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

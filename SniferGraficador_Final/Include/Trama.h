@@ -1,3 +1,5 @@
+#if !defined(_TRAMA_)
+#define _TRAMA_
 #pragma once
 #include <vector>
 
@@ -16,6 +18,15 @@ public:
 	/// <param name="pos">is the pos in the vector</param>
 	/// <returns> the posicion in the vector of payload</returns>
 	virtual int clasifyData(vector<uint8_t>, int) = 0;
+	
+	/// <summary>
+	/// Carfars the sub tram.
+	/// </summary>
+	/// <param name="">The payload of TCP .</param>
+	/// <param name="">The pos in the payLoad .</param>
+	/// <returns></returns>
+	virtual int carfarSubTram(vector<uint8_t>, int) = 0;
 
 };
 
+#endif
