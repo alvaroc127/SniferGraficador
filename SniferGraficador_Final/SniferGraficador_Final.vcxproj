@@ -183,6 +183,7 @@
     <ClCompile Include="src\MindrayParametros.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="src\SubTrama.cpp" />
+    <ClCompile Include="src\SubTramaImpedancia.cpp" />
     <ClCompile Include="src\SubTramaParam.cpp" />
     <ClCompile Include="src\Trama.cpp" />
   </ItemGroup>
@@ -193,6 +194,7 @@
     <ClInclude Include="Include\MindrayPacket.h" />
     <ClInclude Include="Include\MindrayParametros.h" />
     <ClInclude Include="Include\SubTrama.h" />
+    <ClInclude Include="Include\SubTramaImpedancia.h" />
     <ClInclude Include="Include\SubTramaParam.h" />
     <ClInclude Include="Include\Trama.h" />
     <ClInclude Include="src\ofApp.h" />
