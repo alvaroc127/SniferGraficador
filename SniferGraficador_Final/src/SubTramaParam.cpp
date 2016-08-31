@@ -30,3 +30,16 @@ int SubTramaParam::sizePSubtrama() {
 
 	return 0;
 }
+
+
+
+void SubTramaParam::cantByteSub(){
+
+
+}
+
+void SubTramaParam::seleccionMetod() {
+
+
+
+}

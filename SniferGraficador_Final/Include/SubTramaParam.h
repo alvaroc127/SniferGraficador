@@ -9,7 +9,7 @@
 /// Class SubtramaParam
 /// </summary>
 /// <seealso cref="SubTrama" />
-class SubTramaParam : public SubTrama
+class SubTramaParam : virtual  public SubTrama
 {
 private:
 	int start[2];
@@ -45,7 +45,17 @@ public:
 	/// </summary>
 	/// <returns></returns>
 	int sizePSubtrama();
+	
+	/// <summary>
+	/// Cants the byte sub.
+	/// </summary>
+	void cantByteSub();
 
+	
+	/// <summary>
+	/// Seleccions the metod.
+	/// </summary>
+	void seleccionMetod();
 
 
 };

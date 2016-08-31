@@ -31,7 +31,12 @@
     <ClCompile Include="src\SubTramaParam.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\SubTramaImpedancia.cpp" />
+    <ClCompile Include="src\SubTramaImpedancia.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SubTramaMetod.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -69,7 +74,12 @@
     <ClInclude Include="Include\SubTramaParam.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Include\SubTramaImpedancia.h" />
+    <ClInclude Include="Include\SubTramaImpedancia.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SubTramaMetod.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />
