@@ -23,32 +23,13 @@ public:
 	/// </summary>
 	~SubTramaImpedancia();
 	
-	/// <summary>
-	/// Cants the byte sub.
-	/// </summary>
-	void cantByteSub();
+
 	
 	/// <summary>
 	/// Clasficas the sub tra.
 	/// </summary>
 	void clasficaSubTra();
-	
-	/// <summary>
-	/// Joins the header.
-	/// </summary>
-	/// <returns></returns>
-	std::string joinHeader();
-	
-	/// <summary>
-	/// Sizes the sub.
-	/// </summary>
-	/// <returns></returns>
-	int sizeSub();
-		
-	/// <summary>
-	/// Sizes the p subtrama.
-	/// </summary>
-	/// <returns></returns>
-	int sizePSubtrama();
+
+
 };
 #endif

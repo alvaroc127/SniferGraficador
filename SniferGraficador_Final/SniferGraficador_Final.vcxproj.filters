@@ -37,6 +37,24 @@
     <ClCompile Include="src\SubTramaMetod.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\SubTramaArt_AP.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SubTramaECG.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SubTramSpo2.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SubtRamTemp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SubTramaAlarma.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CapturaDeRed.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -78,6 +96,24 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="Include\SubTramaMetod.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SubTramaArt_AP.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SubTramaECG.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SubTramSpo2.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SubtRamTemp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SubTramaAlarma.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\CapturaDeRed.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

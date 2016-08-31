@@ -46,10 +46,6 @@ public:
 	/// <returns></returns>
 	int sizePSubtrama();
 	
-	/// <summary>
-	/// Cants the byte sub.
-	/// </summary>
-	void cantByteSub();
 
 	
 	/// <summary>

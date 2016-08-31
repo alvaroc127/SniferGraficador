@@ -15,7 +15,7 @@ SubTramaParam::~SubTramaParam()
 std::string SubTramaParam::joinHeader() {
 
 
-
+	return "0";
 }
 
 
@@ -32,11 +32,6 @@ int SubTramaParam::sizePSubtrama() {
 }
 
 
-
-void SubTramaParam::cantByteSub(){
-
-
-}
 
 void SubTramaParam::seleccionMetod() {
 
