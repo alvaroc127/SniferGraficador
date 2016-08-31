@@ -25,6 +25,12 @@
     <ClCompile Include="src\MindrayParametros.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\MindrayAlarma.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SubTramaParam.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -54,6 +60,12 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="Include\MindrayParametros.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\MindrayAlarma.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SubTramaParam.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

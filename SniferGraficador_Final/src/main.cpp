@@ -11,8 +11,7 @@ using namespace std;
 //========================================================================
 int main( ){
 	ofSetupOpenGL(1024, 768, OF_WINDOW);
-
-				// <-------- setup the GL context
+		// <-------- setup the GL context
 	vector<NetworkInterface> interfaces = NetworkInterface::all();
 	for (const NetworkInterface& iface : interfaces) {
 		// First print the name (GUID)
@@ -39,5 +38,4 @@ int main( ){
 	// can be OF_WINDOW or OF_FULLSCREEN
 	// pass in width and height too:
 	ofRunApp(new ofApp());
-
 }

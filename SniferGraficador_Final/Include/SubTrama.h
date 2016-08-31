@@ -19,6 +19,7 @@ public:
 	/// </summary>
 	/// <returns>sizePsubtram</returns>
 	virtual int sizePSubtrama() = 0;	
+
 	/// <summary>
 	/// Sizes the sub.
 	/// </summary>

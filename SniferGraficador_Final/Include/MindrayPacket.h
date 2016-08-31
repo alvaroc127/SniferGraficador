@@ -38,7 +38,7 @@ public:
 	/// <param name="">The .</param>
 	/// <param name="">The .</param>
 	/// <returns></returns>
-	int cargarSubTrama(vector<uint8_t>, int);
+	int carfarSubTrama(vector<uint8_t>, int);
 
 
 	/// <summary>

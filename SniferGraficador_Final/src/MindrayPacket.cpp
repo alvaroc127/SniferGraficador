@@ -16,7 +16,7 @@ MindrayPacket::~MindrayPacket()
 };
 
 
-int MindrayPacket::cargarSubTrama(vector<uint8_t>datas, int pos) {
+int MindrayPacket::carfarSubTrama(vector<uint8_t>datas, int pos) {
 
 
 	return 0;
