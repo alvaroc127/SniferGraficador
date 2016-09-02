@@ -16,7 +16,7 @@ class MindrayPacket : public Trama
 private:
 	std::string fuente;
 	const  HeaderTram head;
-	int tam;
+	int tam=0;
 	std::vector<SubTrama>subtrmas;
 	std::string data_time;
 

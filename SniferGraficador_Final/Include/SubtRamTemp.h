@@ -11,9 +11,9 @@
 class SubtRamTemp : virtual public SubTramaParam, SubTramaMetod
 {
 private:
-
-
-
+	double T1;
+	double T2;
+	double TD;
 public:	
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SubtRamTemp"/> class.

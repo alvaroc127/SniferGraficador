@@ -13,8 +13,8 @@ class MindrayAlarma : public Trama
 private:
 	std::vector<SubTrama> subtra;
 	HeaderTram head;
-	int tam;
-	int tip;
+	int tam=0;
+	int tip=0;
 	std::string fuente;
 	std::string date_time;
 
