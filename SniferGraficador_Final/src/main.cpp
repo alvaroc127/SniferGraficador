@@ -2,15 +2,23 @@
 #include <iostream>
 #include <vector>
 #include <tins\tins.h>
+#include "..\Include\CapturaDeRed.h"
 #include "ofMain.h"
 #include "ofApp.h"
+
 
 using namespace Tins;
 using namespace std;
 
+
+
+
+
 //========================================================================
 int main( ){
-	ofSetupOpenGL(1024, 768, OF_WINDOW);
+	CapturaDeRed ca;
+	ca.startCapture();
+	/**
 		// <-------- setup the GL context
 	vector<NetworkInterface> interfaces = NetworkInterface::all();
 	for (const NetworkInterface& iface : interfaces) {
@@ -28,7 +36,7 @@ int main( ){
 	//config.set_timeout(10*1000);
 	config.set_filter(" ip and tcp");
 	Sniffer snifer(iface.name(), config);
-	Packet pack = snifer.next_packet();
+	Packet pack (snifer.next_packet());
 	
 	cout << "paso" << endl;
 	const TCP & tcp = pack.pdu()->rfind_pdu<TCP>();
@@ -37,5 +45,7 @@ int main( ){
 	// this kicks off the running of my app
 	// can be OF_WINDOW or OF_FULLSCREEN
 	// pass in width and height too:
-	ofRunApp(new ofApp());
+	//ofSetupOpenGL(1024, 768, OF_WINDOW);
+	//ofRunApp(new ofApp());
+	*/
 }
