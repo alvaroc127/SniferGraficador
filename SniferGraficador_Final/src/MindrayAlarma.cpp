@@ -23,3 +23,11 @@ int MindrayAlarma::clasifyData(vector<uint8_t>datas,int post) {
 
 	return 0;
 }
+
+int MindrayAlarma::getTipo(int tip) const {
+	return tip + 2;
+}
+
+std::string MindrayAlarma::getFuente() {
+	return this->fuente;
+}

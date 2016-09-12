@@ -27,6 +27,14 @@ public:
 	/// <returns></returns>
 	virtual int carfarSubTram(vector<uint8_t>, int) = 0;
 
+	
+	/// <summary>
+	/// Gets the tipo.
+	/// </summary>
+	/// <param name="para">The para.</param>
+	/// <returns></returns>
+	 virtual int getTipo(int)  const = 0;
+
 };
 
 #endif

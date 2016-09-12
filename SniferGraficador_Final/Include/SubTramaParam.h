@@ -14,7 +14,7 @@ class SubTramaParam : virtual  public SubTrama
 private:
 	uint8_t start[2];
 	uint8_t size[2];
-	uint8_t end[2];
+	uint8_t end[3];
 	std::vector<uint8_t>datas;
 		
 public:	

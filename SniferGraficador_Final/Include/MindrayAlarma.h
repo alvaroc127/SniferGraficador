@@ -45,7 +45,19 @@ public:
 	/// <param name="">The .</param>
 	/// <returns></returns>
 	int carfarSubTram(vector<uint8_t>, int);
-
+	
+	/// <summary>
+	/// Gets the tipo.
+	/// </summary>
+	/// <param name="">The .</param>
+	/// <returns></returns>
+	int getTipo(int) const;
+	
+	/// <summary>
+	/// Gets the fuente.
+	/// </summary>
+	/// <returns></returns>
+	std::string getFuente();
 
 };
 #endif

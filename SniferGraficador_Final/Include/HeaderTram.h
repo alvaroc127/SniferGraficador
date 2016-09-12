@@ -1,6 +1,7 @@
 #if !defined(_HEADERTRAM_)
 #define _HEADERTRAM_
 #pragma once
+#include <iostream>
 #include <vector>
 #include "Header.h"
 /// <summary>
@@ -15,9 +16,6 @@ private:
 	uint8_t hi_ze[8];
 	uint8_t crc[2];
 	uint8_t low_ser[6];
-	uint8_t code1[2];
-	uint8_t consta1[3];
-	uint8_t consta2[2];
 public:	
 	/// <summary>
 	/// Initializes a new instance of the <see cref="HeaderTram"/> class.
@@ -32,6 +30,16 @@ public:
 	/// </summary>
 	/// <returns></returns>
 	int sizePacket();
+	
+	/// <summary>
+	/// Loads the head.
+	/// </summary>
+	/// <param name="">The .</param>
+	/// <param name="">The .</param>
+	/// <returns></returns>
+	int loadHead(std::vector<uint8_t>, int);
+	
+	
 	
 };
 

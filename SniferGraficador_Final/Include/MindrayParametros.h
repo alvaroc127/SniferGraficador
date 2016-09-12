@@ -36,7 +36,21 @@ public:
 	/// Clasifies the data.
 	/// </summary>
 	/// <returns></returns>
-	int clasifyData(vector<uint8_t>, int);
+	int clasifyData(vector<uint8_t>, int);	
+
+	/// <summary>
+	/// Gets the tipo.
+	/// </summary>
+	/// <param name="">The .</param>
+	/// <returns></returns>
+	 int getTipo(int) const;
+
+	 
+	 /// <summary>
+	 /// Gets the fuente.
+	 /// </summary>
+	 /// <returns></returns>
+	 std::string getFuente();
 
 };
 

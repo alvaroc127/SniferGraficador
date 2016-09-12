@@ -188,6 +188,7 @@
     <ClCompile Include="src\SubTramaECG.cpp" />
     <ClCompile Include="src\SubTramaImpedancia.cpp" />
     <ClCompile Include="src\SubTramaMetod.cpp" />
+    <ClCompile Include="src\SubTramaMi.cpp" />
     <ClCompile Include="src\SubTramaParam.cpp" />
     <ClCompile Include="src\SubTramSpo2.cpp" />
     <ClCompile Include="src\SubtRamTemp.cpp" />
@@ -206,6 +207,7 @@
     <ClInclude Include="Include\SubTramaECG.h" />
     <ClInclude Include="Include\SubTramaImpedancia.h" />
     <ClInclude Include="Include\SubTramaMetod.h" />
+    <ClInclude Include="Include\SubTramaMi.h" />
     <ClInclude Include="Include\SubTramaParam.h" />
     <ClInclude Include="Include\SubTramSpo2.h" />
     <ClInclude Include="Include\SubtRamTemp.h" />
