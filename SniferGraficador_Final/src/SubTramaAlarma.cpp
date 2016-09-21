@@ -10,3 +10,7 @@ SubTramaAlarma::SubTramaAlarma()
 SubTramaAlarma::~SubTramaAlarma()
 {
 }
+
+SubTramaAlarma::SubTramaAlarma(const SubTramaAlarma &a) {
+
+}

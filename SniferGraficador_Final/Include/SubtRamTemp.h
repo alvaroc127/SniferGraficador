@@ -14,11 +14,21 @@ private:
 	double T1;
 	double T2;
 	double TD;
+	int val;
 public:	
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SubtRamTemp"/> class.
 	/// </summary>
 	SubtRamTemp();
+	
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SubtRamTemp"/> class.
+	/// </summary>
+	/// <param name="">The .</param>
+	/// <param name="">The .</param>
+	/// <param name="">The .</param>
+	SubtRamTemp(uint8_t[], uint8_t[], uint8_t[]);
+
 	/// <summary>
 	/// Finalizes an instance of the <see cref="SubtRamTemp"/> class.
 	/// </summary>
@@ -26,7 +36,39 @@ public:
 	/// <summary>
 	/// Clasficas the sub tra.
 	/// </summary>
-	void clasficaSubTra();
+	void clasficaSubTra(const std::vector<uint8_t> &, int);
+	
+	/// <summary>
+	/// Runs the data.
+	/// </summary>
+	/// <param name="">The .</param>
+	/// <param name="">The .</param>
+	/// <returns></returns>
+	int runData(const std::vector<uint8_t> &, int);
+	
+	/// <summary>
+	/// Loads the t1.
+	/// </summary>
+	/// <param name="">The .</param>
+	/// <param name="">The .</param>
+	/// <returns></returns>
+	int loadT1(const std::vector<uint8_t> &, int);
+	
+	/// <summary>
+	/// Loads the t2.
+	/// </summary>
+	/// <param name="">The .</param>
+	/// <param name="">The .</param>
+	/// <returns></returns>
+	int loadT2(const std::vector<uint8_t> &, int);
+	
+	/// <summary>
+	/// Loads the t3.
+	/// </summary>
+	/// <param name="">The .</param>
+	/// <param name="">The .</param>
+	/// <returns></returns>
+	int loadTD(const std::vector<uint8_t> &, int);
 };
 
 #endif

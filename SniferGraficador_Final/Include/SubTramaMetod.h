@@ -1,6 +1,8 @@
 #if !defined(_SUBTRAMETOD_)
 #define _SUBTRAMETOD_
 #pragma once
+#include<vector> 
+
 /// <summary>
 /// interface SubtraMetod
 /// </summary>
@@ -15,7 +17,7 @@ public:
 	/// <summary>
 	/// Clasficas the sub tra.
 	/// </summary>
-	virtual  void clasficaSubTra() = 0;
+	virtual  void clasficaSubTra(const std::vector<uint8_t> &, int) = 0;
 };
 
 #endif

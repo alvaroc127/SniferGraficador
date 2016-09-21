@@ -11,8 +11,25 @@ class SubTramaImpedancia : virtual  public SubTramaParam , SubTramaMetod
 {
 private:
 	int impedanciaX2;
+	int val;
 
-public:	
+public:
+	
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SubTramaImpedancia"/> class.
+	/// </summary>
+	/// <param name="a">a.</param>
+	SubTramaImpedancia(const SubTramaImpedancia &a);
+
+
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SubTramaImpedancia"/> class.
+	/// </summary>
+	/// <param name="">The .</param>
+	/// <param name="">The .</param>
+	/// <param name="">The .</param>
+	SubTramaImpedancia(uint8_t[], uint8_t[], uint8_t[]);
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SubTramaImpedancia"/> class.
 	/// </summary>
@@ -28,8 +45,24 @@ public:
 	/// <summary>
 	/// Clasficas the sub tra.
 	/// </summary>
-	void clasficaSubTra();
+	void clasficaSubTra(const std::vector<uint8_t>&, int);
 
+	
+	/// <summary>
+	/// Runs the data.
+	/// </summary>
+	/// <param name="">The .</param>
+	/// <param name="">The .</param>
+	/// <returns></returns>
+	int runData(const std::vector<uint8_t> &, int);
+	
+	/// <summary>
+	/// Cargas the impedancia.
+	/// </summary>
+	/// <param name="">The .</param>
+	/// <param name="">The .</param>
+	/// <returns></returns>
+	int loadImpedancia(const std::vector<uint8_t>&, int);
 
 };
 #endif

@@ -13,12 +13,12 @@
 /// <summary>
 /// Class CapturaDeRed
 /// </summary>
-using namespace Tins;
+
 
 
 typedef struct MyData {
-	SnifferConfiguration s1;
-	NetworkInterface ifaceName;
+	Tins::SnifferConfiguration s1;
+	Tins::NetworkInterface ifaceName;
 };
 
 
@@ -30,10 +30,10 @@ private:
 	MindrayAlarma ma;
 	MindrayPacket mp;
 	MindrayParametros mpp;
-	vector<uint8_t> datWait;
-	string dat_time;
-	bool wait;
-	int posG;
+	std::vector<uint8_t> datWait;
+	std::string dat_time;
+	bool wait =true;
+	int posG=0;
 	//definir la carga de subtrama
 
 public:
@@ -46,7 +46,7 @@ public:
 	/// <summary>
 	/// Finalizes an instance of the <see cref="CapturaDeRed"/> class.
 	/// </summary>
-	~CapturaDeRed();
+	virtual ~CapturaDeRed();
 
 
 	
@@ -54,19 +54,19 @@ public:
 	/// <summary>
 	/// sort the packet of networck for save in the arch
 	/// </summary>
-	 string clasificarPacket(std::vector<uint8_t> &, int );
+	 std::string clasificarPacket(const  std::vector<uint8_t> & , int );
 	
 	/// <summary>
 	/// Configurations the capture.
 	/// </summary>
 	/// <returns></returns>
-	const NetworkInterface  configCapture();
+	Tins::NetworkInterface  configCapture();
 		
 	/// <summary>
 	/// Confingrations the sniffer.
 	/// </summary>
 	/// <returns></returns>
-	const SnifferConfiguration  configSniffer();
+	Tins::SnifferConfiguration  configSniffer();
 	
 	/// <summary>
 	/// Starts the capture.
@@ -83,13 +83,13 @@ public:
 	/// Confs the head.
 	/// </summary>
 	/// <returns></returns>
-	int confHead(string head,string ip,vector<uint8_t>, int);
+	int confHead(const std::string  &head,const  std::string &ip,const std::vector<uint8_t>&, int);
 	
 	/// <summary>
 	/// Capture the data time.
 	/// </summary>
 	/// <returns></returns>
-	 string  captDta_time();
+	std::string  captDta_time();
 		
 
 		
@@ -97,14 +97,21 @@ public:
 	/// Sets the vector.
 	/// </summary>
 	/// <param name="">The .</param>
-	void setVector(vector<uint8_t>);
+	void setVector(const std::vector<uint8_t> &);
 	
 	/// <summary>
 	/// Gets the data wait.
 	/// </summary>
 	/// <returns></returns>
-	const vector<uint8_t>  getDataWait();
-	
+	std::vector<std::uint8_t>  getDataWait();
+		
+	/// <summary>
+	/// Buscars the head.
+	/// </summary>
+	/// <param name="">The .</param>
+	/// <param name="">The .</param>
+	/// <returns></returns>
+	int searchHead(const std::vector<uint8_t> &, int);
 
 };
 

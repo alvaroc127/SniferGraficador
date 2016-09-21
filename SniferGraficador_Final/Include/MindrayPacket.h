@@ -37,7 +37,7 @@ public:
 	/// <summary>
 	/// Finalizes an instance of the <see cref="MindrayPacket"/> class.
 	/// </summary>
-	~MindrayPacket();
+	virtual ~MindrayPacket();
 
 
 	/// <summary>
@@ -46,59 +46,52 @@ public:
 	/// <param name="">The .</param>
 	/// <param name="">The .</param>
 	/// <returns></returns>
-	int carfarSubTram(vector<uint8_t>, int);
+	int carfarSubTram(const std::vector<uint8_t> &, int);
 
 
 	/// <summary>
 	/// Cargars the sub trama.
 	/// </summary>
 	/// <param name="">The .</param>
-	int clasifyData(vector<uint8_t>, int);
-
+	int clasifyData(const std::vector<uint8_t> &, int);
 	/// <summary>
 	/// Sets the fuente.
 	/// </summary>
 	/// <param name="">The .</param>
-	void setFuente(const string);
+	void setFuente(const std::string &);
 
 
 	/// <summary>
 	/// Sets the dta time.
 	/// </summary>
 	/// <param name="">The .</param>
-	void setDtaTime(const string);
+	void setDtaTime(const std::string &);
 
 
 	/// <summary>
 	/// Sets the head.
 	/// </summary>
 	/// <param name="">The .</param>
-	void setHead(HeaderTram);
+	void setHead(const HeaderTram &);
 	
 	/// <summary>
 	/// Gets the head.
 	/// </summary>
 	/// <returns></returns>
-	const HeaderTram & getHead();
+	 HeaderTram  getHead();
 
 	/// <summary>
 	/// Gets the fuente.
 	/// </summary>
 	/// <returns></returns>
-	 string getFuente();
+	 std::string getFuente();
 
 	/// <summary>
 	/// Gets the data time.
 	/// </summary>
 	/// <returns></returns>
-	const string & getDataTime();
-	
-	/// <summary>
-	/// Gets the tipo.
-	/// </summary>
-	/// <param name="">The .</param>
-	/// <returns></returns>
-	 int getTipo(int) const;
+	 std::string  getDataTime();
+
 
 
 	 

@@ -19,14 +19,19 @@ private:
 	std::string date_time;
 
 public:	
+
+	MindrayAlarma(const MindrayAlarma &);
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="MindrayAlarma"/> class.
 	/// </summary>
 	MindrayAlarma();	
+
+
 	/// <summary>
 	/// Finalizes an instance of the <see cref="MindrayAlarma"/> class.
 	/// </summary>
-	~MindrayAlarma();	
+	virtual ~MindrayAlarma();	
 
 
 	/// <summary>
@@ -35,7 +40,7 @@ public:
 	/// <param name="">The .</param>
 	/// <param name="">The .</param>
 	/// <returns></returns>
-	int clasifyData(vector<uint8_t>, int);
+	int clasifyData(const std::vector<uint8_t> &, int);
 
 
 	/// <summary>
@@ -44,7 +49,7 @@ public:
 	/// <param name="">The .</param>
 	/// <param name="">The .</param>
 	/// <returns></returns>
-	int carfarSubTram(vector<uint8_t>, int);
+	int carfarSubTram(const std::vector<uint8_t> &, int);
 	
 	/// <summary>
 	/// Gets the tipo.
@@ -58,6 +63,12 @@ public:
 	/// </summary>
 	/// <returns></returns>
 	std::string getFuente();
+
+	/// <summary>
+	/// Sets the fuente.
+	/// </summary>
+	/// <param name="">The .</param>
+	void setFuente(const std::string);
 
 };
 #endif

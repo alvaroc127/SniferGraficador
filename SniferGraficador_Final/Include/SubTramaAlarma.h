@@ -10,7 +10,14 @@
 /// <seealso cref="SubTramaMetod" />
 class SubTramaAlarma : virtual public SubTramaParam
 {
-public:	
+public:
+
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SubTramaAlarma"/> class.
+	/// </summary>
+	/// <param name="">The .</param>
+	SubTramaAlarma(const SubTramaAlarma &);
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SubTramaAlarma"/> class.
 	/// </summary>

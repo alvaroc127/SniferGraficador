@@ -1,17 +1,24 @@
 #if !defined(_SUBTRAMAMI_)
 #define _SUBTRAMAMI_
-#pragma
+#pragma once
 #include "SubTrama.h"
 #include <vector>
 
 class SubTramaMi : virtual public SubTrama
 {
 private:
-	uint8_t start[1];
-	uint8_t size[2];
-	uint8_t end[1]; 
+	uint8_t *start=new uint8_t[1];
+	uint8_t *size=new uint8_t[2];
+	uint8_t *end=new uint8_t[1]; 
 	std::vector<uint8_t> datas;
-public:	
+public:		
+
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SubTramaMi"/> class.
+	/// </summary>
+	/// <param name="">The .</param>
+	SubTramaMi(const SubTramaMi &);
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SubTramaMi"/> class.
 	/// </summary>
@@ -21,7 +28,7 @@ public:
 	/// <summary>
 	/// Finalizes an instance of the <see cref="SubTramaMi"/> class.
 	/// </summary>
-	~SubTramaMi();
+	 ~SubTramaMi();
 	
 	/// <summary>
 	/// Loads the subtr.
@@ -29,7 +36,7 @@ public:
 	/// <param name="">The .</param>
 	/// <param name="">The .</param>
 	/// <returns></returns>
-	int loadHead(std::vector<uint8_t> , int);
+	int loadHead(const std::vector<uint8_t> & , int);
 
 	
 	/// <summary>
@@ -56,7 +63,7 @@ public:
 	/// <param name="">The .</param>
 	/// <param name="">The .</param>
 	/// <returns></returns>
-	int addData(std::vector<uint8_t>, int,int);
+	int addData(const std::vector<uint8_t> &, int,int);
 
 };
 #endif

@@ -1,8 +1,8 @@
 #if !defined(_SUBTRAMA_)
 #define _SUBTRAMA_
 #pragma once
+#define lenght(x)  (sizeof(x)/sizeof(x[0]))
 #include <string>
-
 /// <summary>
 /// Interface of SubTrama
 /// </summary>
@@ -10,10 +10,23 @@
 class SubTrama
 {
 public:	
+
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SubTrama"/> class.
+	/// </summary>
+	/// <param name="">The .</param>
+	SubTrama(const SubTrama &) {}
+	
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SubTrama"/> class.
+	/// </summary>
+	SubTrama() {}
+
 	/// <summary>
 	/// Finalizes an instance of the <see cref="SubTrama"/> class.
 	/// </summary>
-	virtual ~SubTrama() {}	
+	 virtual ~SubTrama() {}	
+
 	/// <summary>
 	/// Sizes the p subtrama.
 	/// </summary>

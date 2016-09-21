@@ -1,6 +1,10 @@
 #include "..\Include\SubTramaMi.h"
+#include <string>
+using namespace std;
 
+SubTramaMi::SubTramaMi(const SubTramaMi &) {
 
+}
 
 SubTramaMi::SubTramaMi()
 {
@@ -9,12 +13,18 @@ SubTramaMi::SubTramaMi()
 
 SubTramaMi::~SubTramaMi()
 {
-
-
+	datas.erase(datas.begin(), datas.end());
+	this->datas.clear();
+	start = 0;
+	delete []start;
+	size = 0;
+	delete []size;
+	end = 0;
+	delete []end;
 }
 
 
-int SubTramaMi::loadHead(std::vector<uint8_t> datas, int pos) {
+int SubTramaMi::loadHead(const std::vector<uint8_t> &datas, int pos) {
 	int pos1 = 0;
 	for (int i = 0; i < datas.size() && i < 4; i++) {
 		if (i < 1) {
@@ -42,17 +52,15 @@ int SubTramaMi::sizePSubtrama(){
 
 
 int SubTramaMi::sizeSub(){
-
-
-	return 0;
+	return lenght(start)+lenght(end)+lenght(this->size);
 }
 
 std::string SubTramaMi::joinHeader() {
 	uint32_t con = ((this->start[0] << 24) | (this->size[0]<< 16)| (this->size[1]<<8) | this->end[0]);
-	return std::to_string((int)con);
+	return  to_string((int)con);
 }
 
-int SubTramaMi::addData(std::vector<uint8_t> datas,int pos, int tam) {
+int SubTramaMi::addData(const std::vector<uint8_t> &datas,int pos, int tam) {
 	int cont = 0;
 	for (int i = pos; i < datas.size() && cont < tam;i++) {
 		this->datas.push_back(datas.at(i));

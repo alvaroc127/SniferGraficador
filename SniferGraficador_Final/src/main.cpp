@@ -7,8 +7,6 @@
 #include "ofApp.h"
 
 
-using namespace Tins;
-using namespace std;
 
 
 
