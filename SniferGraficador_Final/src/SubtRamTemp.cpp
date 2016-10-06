@@ -4,6 +4,10 @@
 
 
 
+SubtRamTemp::SubtRamTemp( SubTramaParam * sub) :SubTramaParam(sub) {
+
+}
+
 
 SubtRamTemp::SubtRamTemp()
 {
@@ -21,6 +25,10 @@ SubtRamTemp::~SubtRamTemp()
 
 }
 
+
+SubtRamTemp::SubtRamTemp(const SubTramaParam & sub) :SubTramaParam(sub) {
+
+}
 
 void SubtRamTemp::clasficaSubTra(const std::vector<uint8_t> &datas,int pos) {
 	bool ban = true;
@@ -95,4 +103,18 @@ int SubtRamTemp::loadTD(const std::vector<uint8_t> &datas, int pos) {
 		TD = TD / 100;
 	}
 	return ++pos;
+}
+
+/// <summary>
+/// Dats the tram.
+/// </summary>
+/// <param name="">The .</param>
+/// <returns></returns>
+
+Temp SubtRamTemp::datTram(Temp &tip) {
+	tip.T1=this->T1;
+	tip.T2=this->T2;
+	tip.TD=this->TD;
+	tip.tipo="TEMPPARAM.txt";
+	return tip;
 }

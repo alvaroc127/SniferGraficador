@@ -2,8 +2,9 @@
 #define _MINDRAYALARMA_
 #pragma once
 #include "Trama.h"
-#include "SubTrama.h"
 #include "HeaderTram.h"
+#include "SubTramaAlarma.h"
+
 /// <summary>
 /// Class Mindray Alarma
 /// </summary>
@@ -11,12 +12,13 @@
 class MindrayAlarma : public Trama
 {
 private:
-	std::vector<SubTrama> subtra;
+	std::vector<SubTramaAlarma *> subtra;
 	HeaderTram head;
 	int tam=0;
 	int tip=0;
 	std::string fuente;
 	std::string date_time;
+	
 
 public:	
 
@@ -70,5 +72,43 @@ public:
 	/// <param name="">The .</param>
 	void setFuente(const std::string);
 
+	
+	/// <summary>
+	/// Sets the dta time.
+	/// </summary>
+	/// <param name="">The .</param>
+	void setDtaTime(const std::string);
+	
+	/// <summary>
+	/// Gets the head.
+	/// </summary>
+	/// <returns></returns>
+	HeaderTram getHead();
+	
+	/// <summary>
+	/// Gets the data time.
+	/// </summary>
+	/// <returns></returns>
+	std::string getDataTime();
+	
+	/// <summary>
+	/// Sets the head.
+	/// </summary>
+	/// <param name="">The .</param>
+	void setHead(const HeaderTram &);
+	
+	/// <summary>
+	/// Sets the tipo.
+	/// </summary>
+	/// <param name="">The .</param>
+	void setTipo(int);	
+
+	/// <summary>
+	/// Gets the sub tra.
+	/// </summary>
+	/// <returns></returns>
+	std::vector<SubTramaAlarma *> getSubTra();
+	
+	
 };
 #endif

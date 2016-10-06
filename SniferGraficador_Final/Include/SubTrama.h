@@ -45,6 +45,9 @@ public:
 	/// </summary>
 	/// <returns>tehe string of join header</returns>
 	virtual std::string joinHeader() = 0;
+
+	
+	
 };
 
 #endif

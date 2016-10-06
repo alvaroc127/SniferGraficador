@@ -13,16 +13,7 @@ HeaderTram::HeaderTram(){
 
 HeaderTram::~HeaderTram()
 {
-	start = 0;
-	delete[] start;
-	size = 0;
-	delete[] size;
-	hi_ze = 0;
-	delete[] hi_ze;
-	crc = 0;
-	delete[]crc;
-	low_ser = 0;
-	delete[]low_ser;
+	
 };
 
  int HeaderTram::sizePacket() {

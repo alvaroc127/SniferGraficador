@@ -15,7 +15,20 @@ private:
 	int val;
 	bool band;
 public:	
-		
+			
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SubTramaArt_AP"/> class.
+	/// </summary>
+	/// <param name="sub">The sub.</param>
+	SubTramaArt_AP(SubTramaParam * sub);
+
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SubTramaArt_AP"/> class.
+	/// </summary>
+	/// <param name="sub">The sub.</param>
+	SubTramaArt_AP::SubTramaArt_AP(const SubTramaParam & sub);
+
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SubTramaArt_AP"/> class.
 	/// </summary>
@@ -86,6 +99,23 @@ public:
 	///   <c>true</c> if this instance is band; otherwise, <c>false</c>.
 	/// </returns>
 	bool isBand();
+		
+	/// <summary>
+	/// Dats the tram.
+	/// </summary>
+	/// <param name="">The .</param>
+	/// <returns></returns>
+	Ap datTram(Ap &);
+	 
+	 /// <summary>
+	 /// Dats the tram1.
+	 /// </summary>
+	 /// <param name="t">The t.</param>
+	 /// <returns></returns>
+	 Art datTram1(Art &);
+	
+
+
 };
 
 #endif

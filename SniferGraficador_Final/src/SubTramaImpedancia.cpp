@@ -11,6 +11,14 @@ SubTramaImpedancia::SubTramaImpedancia(const SubTramaImpedancia &a) {
 
 }
 
+SubTramaImpedancia::SubTramaImpedancia(const SubTramaParam & sub) :SubTramaParam(sub) {
+
+}
+
+SubTramaImpedancia::SubTramaImpedancia( SubTramaParam  * sub) : SubTramaParam(sub) {
+
+}
+
 SubTramaImpedancia::SubTramaImpedancia()
 {
 }
@@ -51,4 +59,16 @@ int SubTramaImpedancia::loadImpedancia(const std::vector<uint8_t> &datas,int pos
 	this->impedanciaX2 = (int)sal;
 	std::cout << "esto vale impedancia " << impedanciaX2 << std::endl;
 	return ++pos;
+}
+
+/// <summary>
+/// Dats the tram.
+/// </summary>
+/// <param name="">The .</param>
+/// <returns></returns>
+
+Impedancia SubTramaImpedancia::datTram(Impedancia &tip) {
+	tip.impedanciaX2=this->impedanciaX2;
+	tip.tipo = "IMPEPARAM.txt";
+	return tip;
 }

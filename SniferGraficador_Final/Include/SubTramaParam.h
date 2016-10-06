@@ -4,6 +4,7 @@
 #include <vector>
 #include <sstream>
 #include "SubTrama.h"
+#include "Struct.h"
 
 
 /// <summary>
@@ -13,13 +14,20 @@
  class SubTramaParam : virtual  public SubTrama
 {
 private:
-	uint8_t *start=NULL;
-	uint8_t *size=NULL;
-	uint8_t *vodi=NULL;
+	uint8_t start[2];
+	uint8_t size[3];
+	uint8_t vodi[2];
 	std::vector<uint8_t>datas;
-	int siz=0;
+	int siz=2+3+2;
 		
 public:	
+	
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SubTramaParam"/> class.
+	/// </summary>
+	/// <param name="p">The p.</param>
+	SubTramaParam(SubTramaParam *);
+
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SubTramaParam"/> class.
@@ -39,15 +47,9 @@ public:
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SubTramaParam"/> class.
 	/// </summary>
-	SubTramaParam();
+	 SubTramaParam();
 
-	/// <summary>
-	/// Initializes a new instance of the <see cref="SubTramaParam"/> class.
-	/// </summary>
-	/// <param name="">The .</param>	
-	/// <param name="">The .</param>
-	/// <param name="">The .</param>
-	SubTramaParam(int, int, int);
+
 	
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SubTramaParam"/> class.
@@ -132,7 +134,8 @@ public:
 	/// </summary>
 	void setSiz(int);
 
-	
+
+
 
 
 };

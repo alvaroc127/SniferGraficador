@@ -11,11 +11,11 @@
 class HeaderTram : public Header
 {
 private:
-	uint8_t *start=new uint8_t[6];
-	uint8_t *size=new uint8_t[2];
-	uint8_t *hi_ze=new uint8_t[8];
-	uint8_t *crc=new uint8_t[2];
-	uint8_t *low_ser=new uint8_t[6];
+	uint8_t start[6];
+	uint8_t size[2];
+	uint8_t hi_ze[8];
+	uint8_t crc[2];
+	uint8_t low_ser[6];
 	int siz = 6 + 2 + 8 + 2 + 6;
 public:		
 	/// <summary>

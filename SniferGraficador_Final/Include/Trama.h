@@ -4,6 +4,7 @@
 #include <vector>
 
 
+
 class Trama
 {
 public:	
@@ -26,6 +27,8 @@ public:
 	/// <param name="">The pos in the payLoad .</param>
 	/// <returns></returns>
 	virtual int carfarSubTram(const std::vector<uint8_t> &, int) = 0;
+
+
 
 
 };

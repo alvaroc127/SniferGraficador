@@ -13,13 +13,25 @@ private:
 	int impedanciaX2;
 	int val;
 
-public:
+public:	
 	
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SubTramaImpedancia"/> class.
 	/// </summary>
 	/// <param name="a">a.</param>
-	SubTramaImpedancia(const SubTramaImpedancia &a);
+	SubTramaImpedancia(SubTramaParam *);
+
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SubTramaImpedancia"/> class.
+	/// </summary>
+	/// <param name="a">a.</param>
+	SubTramaImpedancia(const SubTramaParam &);
+
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SubTramaImpedancia"/> class.
+	/// </summary>
+	/// <param name="a">a.</param>
+	SubTramaImpedancia(const SubTramaImpedancia &);
 
 
 	/// <summary>
@@ -63,6 +75,12 @@ public:
 	/// <param name="">The .</param>
 	/// <returns></returns>
 	int loadImpedancia(const std::vector<uint8_t>&, int);
+
+
+	
+	Impedancia datTram(Impedancia &);
+
+
 
 };
 #endif

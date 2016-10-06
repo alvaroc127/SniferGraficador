@@ -58,6 +58,9 @@
     <ClCompile Include="src\SubTramaMi.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\GestorArchivo.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -116,10 +119,16 @@
     <ClInclude Include="Include\SubTramaAlarma.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="Include\SubTramaMi.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Struct.h">
+      <Filter>include</Filter>
+    </ClInclude>
     <ClInclude Include="Include\CapturaDeRed.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Include\SubTramaMi.h">
+    <ClInclude Include="Include\GestorArchivo.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

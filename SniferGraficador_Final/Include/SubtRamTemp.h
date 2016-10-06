@@ -16,6 +16,20 @@ private:
 	double TD;
 	int val;
 public:	
+
+	/// <summary>
+	/// Subs the trama ecg.
+	/// </summary>
+	/// <param name="sub">The sub.</param>
+	/// <returns></returns>
+	SubtRamTemp( SubTramaParam * sub);
+
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SubtRamTemp"/> class.
+	/// </summary>
+	/// <param name="sub">The sub.</param>
+	SubtRamTemp(const SubTramaParam & sub);
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SubtRamTemp"/> class.
 	/// </summary>
@@ -69,6 +83,11 @@ public:
 	/// <param name="">The .</param>
 	/// <returns></returns>
 	int loadTD(const std::vector<uint8_t> &, int);
+
+
+	Temp datTram(Temp &);
+	
+
 };
 
 #endif

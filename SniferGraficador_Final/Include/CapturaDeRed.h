@@ -4,10 +4,19 @@
 #pragma once
 #include <vector>
 #include <tins\tins.h>
-#include "..\Include\Trama.h"
-#include "..\Include\MindrayPacket.h"
-#include "..\Include\MindrayAlarma.h"
-#include "..\Include\MindrayParametros.h"
+#include "Trama.h"
+#include "MindrayPacket.h"
+#include "MindrayAlarma.h"
+#include "MindrayParametros.h"
+#include "SubTramaECG.h"
+#include "SubTramaAlarma.h"
+#include "SubTramaArt_AP.h"
+#include "SubTramaImpedancia.h"
+#include "SubtRamTemp.h"
+#include "SubTramSpo2.h"
+#include "GestorArchivo.h"
+
+
 
 
 /// <summary>
@@ -34,7 +43,7 @@ private:
 	std::string dat_time;
 	bool wait =true;
 	int posG=0;
-	//definir la carga de subtrama
+	GestorArchivo ga;
 
 public:
 	/// <summary>
@@ -112,7 +121,21 @@ public:
 	/// <param name="">The .</param>
 	/// <returns></returns>
 	int searchHead(const std::vector<uint8_t> &, int);
+	
+	/// <summary>
+	/// Guardars the mp.
+	/// </summary>
+	bool guardarMP(MindrayPacket &);	
 
+	/// <summary>
+	/// Guardars the MPP.
+	/// </summary>
+	bool guardarMPP(MindrayParametros &);	
+
+	/// <summary>
+	/// Guardars the ma.
+	/// </summary>
+	bool guardarMA(MindrayAlarma &);
 };
 
 

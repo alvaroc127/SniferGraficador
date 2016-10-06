@@ -21,7 +21,26 @@ private:
 	double II;
 	double III;
 public:
+		
+	
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SubTramaECG"/> class.
+	/// </summary>
+	/// <param name="">The .</param>
+	SubTramaECG(SubTramaParam *);
 
+
+	/// <summary>
+	/// Subs the trama parameter.
+	/// </summary>
+	/// <param name="">The .</param>
+	/// <returns></returns>
+	SubTramaECG(const SubTramaParam &);
+
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SubTramaECG"/> class.
+	/// </summary>
+	/// <param name="">The .</param>
 	SubTramaECG(const SubTramaECG &);
 	
 	/// <summary>
@@ -29,6 +48,7 @@ public:
 	/// </summary>
 	SubTramaECG();
 	
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SubTramaECG"/> class.
 	/// </summary>
@@ -126,6 +146,8 @@ public:
 	/// <returns></returns>
 	int loadIII(const std::vector<uint8_t> &, int);
 
+
+	 ECG datTram(ECG &);
 };
 
 

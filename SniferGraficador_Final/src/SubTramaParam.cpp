@@ -9,8 +9,31 @@
 
 
 
-SubTramaParam::SubTramaParam(const SubTramaParam &a) {
 
+
+SubTramaParam::SubTramaParam(SubTramaParam *p) {
+	this->size[0] = p->size[0];
+	this->size[1] = p->size[1];
+	this->size[2] = p->size[2];
+	this->start[0] = p->start[0];
+	this->start[1] = p->start[1];
+	this->datas = p->datas;
+	this->vodi[0] = p->vodi[0];
+	this->vodi[1] = p->vodi[1];
+	this->siz = p->siz;
+}
+
+
+SubTramaParam::SubTramaParam(const SubTramaParam &a) {
+	this->size[0] = a.size[0];
+	this->size[1] = a.size[1];
+	this->size[2] = a.size[2];
+	this->start[0] = a.start[0];
+	this->start[1] = a.start[1];
+	this->datas = a.datas;
+	this->vodi[0] = a.vodi[0];
+	this->vodi[1] = a.vodi[1];
+	this->siz = a.siz;
 }
 
 SubTramaParam::SubTramaParam()
@@ -22,25 +45,13 @@ SubTramaParam::~SubTramaParam()
 {
 	this->datas.erase(datas.begin(), datas.end());
 	this->datas.clear();
-	  start=0;
-	  vodi=0;
-	 size=0;
-	 delete [] start;
-	 delete [] vodi;
-	 delete [] size;
 }
 
-SubTramaParam::SubTramaParam(int t1,int t2 , int t3) {
-	this->start = new uint8_t[t1];//2
-	this->vodi = new uint8_t[t2];//3
-	this->size = new uint8_t[t3];//2
-	this->siz= t1 + t2 + t3;
-}
 
-SubTramaParam::SubTramaParam(uint8_t start1 [] , uint8_t vody [], uint8_t size[]){
-	this->start = start1;
-	this->vodi = vody;
-	this->size = size;
+
+SubTramaParam::SubTramaParam(uint8_t start1[], uint8_t vody[], uint8_t size[]) {
+	
+	
 	
 }
 
@@ -49,13 +60,10 @@ std::string SubTramaParam::joinHeader(){
 	std::stringstream a1;
 	uint16_t v1;
 	uint32_t v2;
-	uint16_t v3;
 	v1 = ((this->start[0]<< 8) | this->start[1]);
 	a1 << std::hex << v1;
 	v2 = (this->vodi[0] << 16) | this->vodi[1] << 8 | this->vodi[2];
 	a1 << std::hex << v2;
-	v3 = this->size[0] << 8 | this->size[1];
-	a1 << std::hex << v3;
 	return a1.str();
 }
 
@@ -102,15 +110,18 @@ int SubTramaParam::loadHead(const std::vector<uint8_t> & datas, int pos) {
 	int pos1 = 0;
 	for (int i = 0; i < datas.size() && i < 7; i++) {
 		if (i<2) {
-			this->start[pos1++] = datas.at(pos++);
+			this->start[pos1++] = datas.at(pos);
+			pos++;
 		}
 		else if(i>=2 && i< 5){
 			if (i == 2)pos1 = 0;
-			this->vodi[pos1++] =  datas.at(pos++);
+			this->vodi[pos1++] =  datas.at(pos);
+			pos++;
 		}
 		else if(i >= 5 && i < 7){
 			if (i == 5) pos1 = 0;
-			this->size[pos1++] = datas.at(pos++);
+			this->size[pos1++] = datas.at(pos);
+			pos++;
 		}
 	}
 	return pos;
@@ -142,3 +153,7 @@ uint8_t * SubTramaParam::getvodi() {
 void SubTramaParam::setSiz(int siz) {
 	this->siz = siz;
 }
+
+
+
+

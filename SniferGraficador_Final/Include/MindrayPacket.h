@@ -8,6 +8,7 @@
 #include "SubTramaMi.h"
 
 
+
 /// <summary>
 /// Class MindrayPacke
 /// </summary>
@@ -18,8 +19,9 @@ private:
 	std::string fuente;
 	HeaderTram head;
 	int tam = 0;
-	std::vector<SubTramaMi>subtrmas;
+	std::vector<SubTramaMi *>subtrmas;
 	std::string data_time;
+	//GestorArchivo ga;
 
 public:	
 
@@ -92,9 +94,25 @@ public:
 	/// <returns></returns>
 	 std::string  getDataTime();
 
-
-
 	 
-
+	 /// <summary>
+	 /// Gets the datas.
+	 /// </summary>
+	 /// <returns></returns>
+	 std::vector<SubTramaMi *> getSubTra();
+	 
+	 /// <summary>
+	 /// Guardars the arch.
+	 /// </summary>
+	 /// <returns></returns>
+	 bool guardarArch();
+	 	 
+	 /// <summary>
+	 /// Operator=s the specified a.
+	 /// </summary>
+	 /// <param name="a">a.</param>
+	 /// <returns></returns>
+	/// MindrayPacket operator=(const MindrayPacket &a);
+ 
 };
 #endif

@@ -11,9 +11,9 @@ private:
 	std::string fuente;
 	HeaderTram head;
 	int tam =0;
-	std::vector<SubTramaParam>subtrmas;
+	std::vector<SubTramaParam *>subtrmas;
 	std::string data_time;
-
+	
 
 public:	
 	/// <summary>
@@ -92,6 +92,15 @@ public:
 	 /// <param name="">The .</param>
 	 /// <returns></returns>
 	 int codeType(const std::vector<uint8_t> &,int);
+	 
+	 /// <summary>
+	 /// Gets the sub tra.
+	 /// </summary>
+	 /// <returns></returns>
+	 std::vector<SubTramaParam *> getSubTra();
+
+	 
+	
 
 };
 

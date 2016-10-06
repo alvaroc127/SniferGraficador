@@ -1,6 +1,5 @@
 #include "..\Include\MindrayPacket.h"
-
-
+#include<iostream>
 
 MindrayPacket::MindrayPacket() {
 
@@ -26,24 +25,23 @@ MindrayPacket::~MindrayPacket()
 
 
 int MindrayPacket::carfarSubTram(const std::vector<uint8_t> &datas, int pos) {
-	SubTramaMi su;
+	SubTramaMi *su =new SubTramaMi;
 	int tamar = 0;
-	pos=su.loadHead(datas, pos);
-	tamar = su.sizePSubtrama();
-	std::cout << "este es el join de subHead" << su.joinHeader() << std::endl;
-	//getchar();
-	if (su.joinHeader() == "32507909") {
-		pos = su.addData(datas, pos,su.sizePSubtrama()*2);
-		this->tam += (tamar*2) + su.sizeSub();
-	}else if(su.joinHeader() == "33556485"){
-		pos=su.addData(datas,pos,su.sizePSubtrama()*2);
-		this->tam += (tamar * 2) + su.sizeSub();
+	pos=su->loadHead(datas, pos);
+	tamar = su->sizePSubtrama();
+	if (su->joinHeader() == "520126469") {
+		pos = su->addData(datas, pos,su->sizePSubtrama()*2);
+		this->tam += (tamar*2) + su->sizeSub();
+	}else if(su->joinHeader() == "536903685"){
+		pos=su->addData(datas,pos,su->sizePSubtrama()*2);
+		this->tam += (tamar * 2) + su->sizeSub();
 	}else{
-		pos=su.addData(datas,pos,su.sizePSubtrama());
-		this->tam += tamar  + su.sizeSub();
+		pos=su->addData(datas,pos,su->sizePSubtrama()); 
+		std::cout << su->dataSize() << std::endl;
+		this->tam += tamar  + su->sizeSub();
 	}
+	std::cout << su->joinHeader() << std::endl;
 	this->subtrmas.push_back(su);
-	su.~SubTramaMi();
 	return pos;
 };
 
@@ -51,7 +49,7 @@ int MindrayPacket::clasifyData(const std::vector<uint8_t> &datas  , int pos) {
 	int tma=0;
 	pos=this->head.loadHead(datas, pos);
 	tma = head.sizePacket();
-	this->tam = head.cantPacket(0);
+	this->tam = this->head.cantPacket(0);
 	pos+=7;
 	//printf("el valor actual en datas es %X\n", datas.at(pos)); 
 	//printf("y el siguiente %X\n", datas.at(pos + 1));
@@ -59,7 +57,8 @@ int MindrayPacket::clasifyData(const std::vector<uint8_t> &datas  , int pos) {
 		pos=carfarSubTram(datas,pos);
 	} while (this->tam < tma);
 	this->tam = 0;
-	//cout << "tam paquete : "<< this->head.sizePacket() << endl;
+	std::cout << "cant subtra ----: "<< this->subtrmas.size() << std::endl;
+	std::cout << "join ----: " << this->subtrmas.at(0)->joinHeader()<< std::endl;
 	return pos;
 };
 
@@ -92,7 +91,8 @@ std::string  MindrayPacket::getFuente() {
 }
 
 
+ std::vector<SubTramaMi *> MindrayPacket::getSubTra() {
+	 return this->subtrmas;
+ }
 
-
-
-
+ 

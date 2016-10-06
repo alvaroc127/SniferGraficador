@@ -5,11 +5,17 @@ SubTramaArt_AP::SubTramaArt_AP(uint8_t start[], uint8_t vodi[], uint8_t size[]):
 
 }
 
+SubTramaArt_AP::SubTramaArt_AP(SubTramaParam * sub) : SubTramaParam(sub) {
+
+}
+
 SubTramaArt_AP::SubTramaArt_AP(const SubTramaArt_AP &) {
 
 
 }
+SubTramaArt_AP::SubTramaArt_AP(const SubTramaParam & sub) :SubTramaParam(sub) {
 
+}
 
 SubTramaArt_AP::SubTramaArt_AP()
 {
@@ -101,4 +107,27 @@ int SubTramaArt_AP::loadParentesis(const std::vector<uint8_t> &datas,int pos) {
 
 bool SubTramaArt_AP::isBand() {
 	return this->band;
+}
+
+/// <summary>
+/// Dats the tram.
+/// </summary>
+/// <param name="">The .</param>
+/// <returns></returns>
+
+Ap SubTramaArt_AP::datTram(Ap & tip) {
+	tip.alto = this->alto;
+	tip.bajo = this->bajo;
+	tip.parentesis = this->parentesis;
+	tip.tipo = "ART.txt";
+	return tip;
+}
+
+
+Art SubTramaArt_AP::datTram1(Art & tip2) {
+	tip2.alto = this->alto;
+	tip2.bajo = this->bajo;
+	tip2.parentesis = this->parentesis;
+	tip2.tipo = "AP.txt";
+	return tip2;
 }

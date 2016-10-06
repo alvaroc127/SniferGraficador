@@ -2,14 +2,15 @@
 #define _SUBTRAMAMI_
 #pragma once
 #include "SubTrama.h"
+#include "Struct.h"
 #include <vector>
 
 class SubTramaMi : virtual public SubTrama
 {
 private:
-	uint8_t *start=new uint8_t[1];
-	uint8_t *size=new uint8_t[2];
-	uint8_t *end=new uint8_t[1]; 
+	uint8_t start[1];
+	uint8_t size[2];
+	uint8_t end[1]; 
 	std::vector<uint8_t> datas;
 public:		
 
@@ -63,7 +64,22 @@ public:
 	/// <param name="">The .</param>
 	/// <param name="">The .</param>
 	/// <returns></returns>
-	int addData(const std::vector<uint8_t> &, int,int);
+	int addData(const std::vector<uint8_t> &, int,int);	
+
+	/// <summary>
+	/// Datas the size.
+	/// </summary>
+	/// <returns></returns>
+	int dataSize();
+
+	
+	/// <summary>
+	/// Dats the tram.
+	/// </summary>
+	/// <param name="sig">The sig.</param>
+	/// <returns></returns>
+	Signal datTram(Signal &sig);
+	
 
 };
 #endif

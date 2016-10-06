@@ -2,6 +2,14 @@
 #include <iostream>
 
 
+SubTramSpo2::SubTramSpo2( SubTramaParam * sub) :SubTramaParam(sub) {
+
+}
+
+SubTramSpo2::SubTramSpo2(const SubTramaParam & sub) :SubTramaParam(sub) {
+
+}
+
 SubTramSpo2::SubTramSpo2(uint8_t start[],uint8_t vodi[],uint8_t size[]) :SubTramaParam(start,vodi,size){
 
 
@@ -74,4 +82,17 @@ int SubTramSpo2::runData(const std::vector<uint8_t> &datas, int pos) {
 	uint32_t sal = (datas.at(pos++) << 16) | (datas.at(pos++) << 8) | (datas.at(pos++));
 	this->val = (int)sal;
 	return pos;
+}
+
+/// <summary>
+/// Dats the tram.
+/// </summary>
+/// <param name="">The .</param>
+/// <returns></returns>
+
+SPO2 SubTramSpo2::datTram(SPO2 &tip) {
+	tip.dato1=this->dato1;
+	tip.frecuencia=this->frecuencia;
+	tip.tipo="SPO2PARAM.txt";
+	return tip;
 }

@@ -15,7 +15,20 @@ private:
 	int frecuencia;
 	int val;
 
-public:	
+public:		
+	
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SubTramSpo2"/> class.
+	/// </summary>
+	/// <param name="sub">The sub.</param>
+	SubTramSpo2( SubTramaParam * sub);
+
+
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SubTramSpo2"/> class.
+	/// </summary>
+	/// <param name="sub">The sub.</param>
+	SubTramSpo2(const SubTramaParam & sub);
 
 	SubTramSpo2(uint8_t[],uint8_t[],uint8_t[]);
 	/// <summary>
@@ -58,6 +71,7 @@ public:
 	/// <returns></returns>
 	int runData(const std::vector<uint8_t> &, int);
 
+	SPO2  datTram(SPO2 &);
 };
 
 #endif

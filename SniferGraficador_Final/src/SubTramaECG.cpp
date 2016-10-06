@@ -22,6 +22,14 @@ SubTramaECG::~SubTramaECG()
 	
 }
 
+SubTramaECG::SubTramaECG(SubTramaParam * sub):SubTramaParam(sub) {
+
+}
+
+SubTramaECG::SubTramaECG(const SubTramaParam & sub ):SubTramaParam(sub) {
+
+}
+
 int SubTramaECG::runData(const std::vector<uint8_t> &datas,int pos) {
 	uint32_t sal = (datas.at(pos++) << 16) | (datas.at(pos++) << 8) | (datas.at(pos++));
 	this->val = (int)sal;
@@ -230,4 +238,19 @@ int SubTramaECG::loadI(const std::vector<uint8_t> &datas, int pos) {
 	}
 	std::cout << "esto vale I" << this->I << std::endl;
 	return ++pos;
+}
+
+
+ECG SubTramaECG::datTram(ECG & tip) {
+	 tip.aVF=this->aVF;
+	 tip.aVL=this->aVL;
+	 tip.aVR=this->aVR;
+	 tip.CVP=this->CVP;
+	tip.frecuencia=this->frecuencia;
+	tip.I=this->I;
+	tip.V=this->V;
+	 tip.II=this->II;
+	 tip.III=this->III;
+	 tip.tipo = "ECGPARAM.txt";
+	 return tip;
 }
